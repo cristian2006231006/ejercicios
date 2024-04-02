@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio 2</title>
+</head>
+<body>
+    <label for="numero1">Ingrese el primer número:</label>
+<input type="number" id="numero1" placeholder="Ingrese el primer número"><br><br>
+
+<label for="numero2">Ingrese el segundo número:</label>
+<input type="number" id="numero2" placeholder="Ingrese el segundo número"><br><br>
+
+<button onclick="compararNumeros()">Comparar</button><br><br>
+
+<p id="resultado"></p>
+
+<script>
+    function compararNumeros() {
+        // Obtener los números ingresados por el usuario
+        var numero1 = parseFloat(document.getElementById("numero1").value);
+        var numero2 = parseFloat(document.getElementById("numero2").value);
+
+        // Comparar los números
+        if (numero1 > numero2) {
+            document.getElementById("resultado").textContent = "El primer número es mayor que el segundo.";
+        } else if (numero1 < numero2) {
+            document.getElementById("resultado").textContent = "El primer número es menor que el segundo.";
+        } else {
+            document.getElementById("resultado").textContent = "Los dos números son iguales.";
+        }
+    }
+</script>
+<a href="pag2.html">Volver a la página de inicio</a>
+
+</body>
+</html>

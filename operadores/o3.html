@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio 4</title>
+</head>
+<body>
+    <input type="number" id="eurosInput" placeholder="Ingrese la cantidad en euros">
+    <button onclick="convertir()">Convertir a Dólares</button>
+    
+    <p>El equivalente en dólares es: <span id="dolaresOutput"></span></p>
+    
+    <script>
+        function convertir() {
+            // Obtener la cantidad en euros ingresada por el usuario
+            var euros = document.getElementById("eurosInput").value;
+    
+            // Convertir la cantidad a dólares (1 euro = 1.22 dólares aproximadamente)
+            var dolares = euros * 1.22;
+    
+            // Mostrar el resultado en la página
+            document.getElementById("dolaresOutput").textContent = dolares.toFixed(2) + " dólares";
+        }
+    </script>
+    
+
+<a href="pag2.html">Volver a la página de inicio</a>
+
+</body>
+</html>

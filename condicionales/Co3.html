@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio 2</title>
+</head>
+<body>
+    <label for="numero1">Ingrese el primer número:</label>
+<input type="number" id="numero1" placeholder="Ingrese el primer número" min="0" required><br><br>
+
+<label for="numero2">Ingrese el segundo número:</label>
+<input type="number" id="numero2" placeholder="Ingrese el segundo número" min="0" required><br><br>
+
+<label for="numero3">Ingrese el tercer número:</label>
+<input type="number" id="numero3" placeholder="Ingrese el tercer número" min="0" required><br><br>
+
+<button onclick="compararNumeros()">Comparar</button><br><br>
+
+<p id="resultado"></p>
+
+<script>
+    function compararNumeros() {
+        // Obtener los números ingresados por el usuario
+        var numero1 = parseInt(document.getElementById("numero1").value);
+        var numero2 = parseInt(document.getElementById("numero2").value);
+        var numero3 = parseInt(document.getElementById("numero3").value);
+
+        // Verificar que los números sean enteros positivos
+        if (numero1 < 0 || numero2 < 0 || numero3 < 0) {
+            document.getElementById("resultado").textContent = "Por favor, ingrese números enteros positivos.";
+            return;
+        }
+
+        // Comparar los números
+        if (numero1 > numero2 && numero1 > numero3) {
+            document.getElementById("resultado").textContent = "El primer número es el mayor.";
+        } else if (numero2 > numero1 && numero2 > numero3) {
+            document.getElementById("resultado").textContent = "El segundo número es el mayor.";
+        } else if (numero3 > numero1 && numero3 > numero2) {
+            document.getElementById("resultado").textContent = "El tercer número es el mayor.";
+        } else {
+            document.getElementById("resultado").textContent = "Hay números iguales o todos son iguales.";
+        }
+    }
+</script>
+
+<a href="pag2.html">Volver a la página de inicio</a>
+
+</body>
+</html>

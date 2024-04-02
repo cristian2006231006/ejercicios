@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio 2</title>
+</head>
+<body>
+    <label for="numero1">Ingrese el primer número:</label>
+<input type="number" id="numero1" placeholder="Ingrese el primer número" required><br><br>
+
+<label for="numero2">Ingrese el segundo número:</label>
+<input type="number" id="numero2" placeholder="Ingrese el segundo número" required><br><br>
+
+<button onclick="dividir()">Dividir</button><br><br>
+
+<p>El resultado de la división es: <span id="resultado"></span></p>
+
+<script>
+    function dividir() {
+        // Obtener los números ingresados por el usuario
+        var numero1 = parseFloat(document.getElementById("numero1").value);
+        var numero2 = parseFloat(document.getElementById("numero2").value);
+
+        // Verificar si el segundo número es cero para evitar división por cero
+        if (numero2 === 0) {
+            document.getElementById("resultado").textContent = "Error: No se puede dividir por cero.";
+            return;
+        }
+
+        // Realizar la división
+        var resultado = numero1 / numero2;
+
+        // Mostrar el resultado en la página
+        document.getElementById("resultado").textContent = resultado.toFixed(2);
+    }
+</script>
+<a href="pag2.html">Volver a la página de inicio</a>
+
+</body>
+</html>

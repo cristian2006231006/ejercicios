@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ejercicio 3</title>
+</head>
+<body>
+    <input type="number" id="base" placeholder="Ingrese la base">
+<input type="number" id="exponente" placeholder="Ingrese el exponente">
+<button onclick="calcularPotencia()">Calcular Potencia</button>
+
+<p>El resultado es: <span id="resultado"></span></p>
+
+<script>
+    function calcularPotencia() {
+        // Obtener los valores ingresados por el usuario
+        var base = document.getElementById("base").value;
+        var exponente = document.getElementById("exponente").value;
+
+        // Convertir los valores a números
+        base = parseFloat(base);
+        exponente = parseFloat(exponente);
+
+        // Calcular la potencia
+        var resultado = Math.pow(base, exponente);
+
+        // Mostrar el resultado en la página
+        document.getElementById("resultado").textContent = resultado;
+    }
+</script>
+
+<a href="pag2.html">Volver a la página de inicio</a>
+
+</body>
+</html>
